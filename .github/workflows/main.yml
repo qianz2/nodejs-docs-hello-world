@@ -1,0 +1,16 @@
+name: Nodejs app
+on:
+
+  schedule:
+
+    - cron: '*/2 * * * *'
+      
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: App Service Web App Build Action
+      uses: Azure/appservice-build@zqian/add-intermediate-dir
